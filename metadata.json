@@ -1,0 +1,6 @@
+{
+  "name": "অধ্যয়ন",
+  "description": "স্মার্ট এআই অধ্যয়ন ও পরীক্ষার প্ল্যাটফর্ম (Oddhoyon Smart AI Study & Exam Platform)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

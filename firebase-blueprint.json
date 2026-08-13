@@ -1,0 +1,100 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User profile data",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "targetExam": { "type": "string" },
+        "preferredLanguage": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "exams": {
+      "title": "Exams",
+      "description": "Target exam syllabi and deadlines",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "subject": { "type": "string" },
+        "examDate": { "type": "string" },
+        "targetBoard": { "type": "string" },
+        "preparationScore": { "type": "number" },
+        "chapters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "status": { "type": "string" },
+              "weightage": { "type": "number" }
+            }
+          }
+        },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["userId", "title", "subject", "examDate"]
+    },
+    "studyItems": {
+      "title": "Study Items",
+      "description": "Study list tasks and topics",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "subject": { "type": "string" },
+        "chapter": { "type": "string" },
+        "type": { "type": "string" },
+        "status": { "type": "string" },
+        "priority": { "type": "string" },
+        "examId": { "type": "string" },
+        "targetDate": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["userId", "title", "subject", "type", "status"]
+    },
+    "materials": {
+      "title": "Materials",
+      "description": "Uploaded study notes and extracted OCR formulas",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "subject": { "type": "string" },
+        "chapter": { "type": "string" },
+        "uploadedAt": { "type": "string" },
+        "fileType": { "type": "string" },
+        "fileUrl": { "type": "string" },
+        "extractedText": { "type": "string" },
+        "extractedFormulas": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "examId": { "type": "string" }
+      },
+      "required": ["userId", "title", "subject"]
+    },
+    "mistakes": {
+      "title": "Mistakes",
+      "description": "Mistake book items from practice tests",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "questionText": { "type": "string" },
+        "yourAnswer": { "type": "string" },
+        "correctAnswer": { "type": "string" },
+        "explanation": { "type": "string" },
+        "subject": { "type": "string" },
+        "addedAt": { "type": "string" },
+        "mastered": { "type": "boolean" }
+      },
+      "required": ["userId", "questionText", "yourAnswer", "correctAnswer"]
+    }
+  }
+}
