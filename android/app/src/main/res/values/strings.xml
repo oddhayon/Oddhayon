@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Oddhayon</string>
+    <string name="title_activity_main">Oddhayon</string>
+    <string name="package_name">com.oddhayon.app</string>
+    <string name="custom_url_scheme">com.oddhayon.app</string>
+</resources>
