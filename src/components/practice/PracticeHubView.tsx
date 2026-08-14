@@ -51,7 +51,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           className="inline-flex items-center gap-2 px-4 py-2 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 font-semibold rounded-xl text-xs shadow-xs transition-all"
         >
           <Sparkles className="w-4 h-4 text-indigo-400" />
-          <span>{language === "bn" ? "নতুন টেস্ট জেনারেট করুন" : "Generate Test"}</span>
+          <span>{language === "bn" ? "নতুন টেস্ট জেনারেট করো" : "Generate Test"}</span>
         </button>
       </div>
 
@@ -119,7 +119,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
           <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-12 text-center text-xs text-stone-400">
             <BrainCircuit className="w-10 h-10 mx-auto text-stone-300 dark:text-stone-700 mb-2" />
             {language === "bn"
-              ? "এখনো কোনো টেস্ট জেনারেট করা হয়নি। উপরে 'নতুন টেস্ট জেনারেট করুন' বাটনে ক্লিক করুন!"
+              ? "এখনো কোনো টেস্ট জেনারেট করা হয়নি। উপরে 'নতুন টেস্ট জেনারেট করো' বাটনে ক্লিক করো!"
               : "No tests generated yet. Click 'Generate Test' above to start!"}
           </div>
         ) : (
@@ -166,7 +166,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
                         onClick={() => onViewAttempt(t, lastAttempt)}
                         className="text-xs font-semibold text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-200"
                       >
-                        {language === "bn" ? "ফলাফল ও সমাধান দেখুন" : "View Results"}
+                        {language === "bn" ? "ফলাফল ও সমাধান দেখো" : "View Results"}
                       </button>
                     ) : (
                       <span className="text-[11px] text-stone-400">
@@ -185,7 +185,7 @@ export const PracticeHubView: React.FC<PracticeHubViewProps> = ({
                             ? "পুনরায় পরীক্ষা দিন"
                             : "Retake Exam"
                           : language === "bn"
-                          ? "পরীক্ষা শুরু করুন"
+                          ? "পরীক্ষা শুরু করো"
                           : "Start Exam"}
                       </span>
                     </button>

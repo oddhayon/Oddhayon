@@ -69,10 +69,10 @@ export const CreateStudyItemModal: React.FC<CreateStudyItemModalProps> = ({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title={language === "bn" ? "পড়ার বিষয় / টপিক যুক্ত করুন" : "Add Study Topic"}
+      title={language === "bn" ? "পড়ার বিষয় / টপিক যুক্ত করো" : "Add Study Topic"}
       subtitle={
         language === "bn"
-          ? "পড়ার জন্য লেকচার, থিওরি, সূত্র বা গাণিতিক সমস্যা তালিকাভুক্ত করুন"
+          ? "পড়ার জন্য লেকচার, থিওরি, সূত্র বা গাণিতিক সমস্যা তালিকাভুক্ত করো"
           : "Add theory concepts, math problem sets, or formula topics"
       }
     >
@@ -200,7 +200,7 @@ export const CreateStudyItemModal: React.FC<CreateStudyItemModalProps> = ({
             type="submit"
             className="px-5 py-2 bg-stone-900 hover:bg-black text-white font-bold border border-stone-800 border-b-3 border-b-stone-950 rounded-xl transition-all cursor-pointer active:translate-y-[1px]"
           >
-            {language === "bn" ? "টপিক যুক্ত করুন" : "Add Topic"}
+            {language === "bn" ? "টপিক যুক্ত করো" : "Add Topic"}
           </button>
         </div>
       </form>

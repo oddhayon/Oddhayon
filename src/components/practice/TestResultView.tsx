@@ -65,7 +65,7 @@ export const TestResultView: React.FC<TestResultViewProps> = ({
             <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100">
               {isPassed
                 ? language === "bn"
-                  ? "চমৎকার! আপনি উত্তীর্ণ হয়েছেন"
+                  ? "চমৎকার! তুমি উত্তীর্ণ হয়েছেন"
                   : "Great Job! Assessment Passed"
                 : language === "bn"
                 ? "প্রস্তুতি আরও জোরদার করতে হবে"
@@ -219,7 +219,7 @@ export const TestResultView: React.FC<TestResultViewProps> = ({
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 rounded-xl text-xs font-semibold border border-rose-200/60 dark:border-rose-800/60 transition-colors"
                 >
                   <AlertCircle className="w-3.5 h-3.5" />
-                  <span>{language === "bn" ? "ভুল উত্তর ব্যাংকে সেভ করুন" : "Save to Mistake Book"}</span>
+                  <span>{language === "bn" ? "ভুল উত্তর ব্যাংকে সেভ করো" : "Save to Mistake Book"}</span>
                 </button>
 
                 <button
@@ -227,7 +227,7 @@ export const TestResultView: React.FC<TestResultViewProps> = ({
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 rounded-xl text-xs font-semibold border border-indigo-200/60 dark:border-indigo-800/60 transition-colors"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                  <span>{language === "bn" ? "এআই টিউটরকে জিজ্ঞেস করুন" : "Ask AI Tutor"}</span>
+                  <span>{language === "bn" ? "এআই টিউটরকে জিজ্ঞেস করো" : "Ask AI Tutor"}</span>
                 </button>
               </div>
             </div>

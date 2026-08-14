@@ -135,7 +135,7 @@ export const WelcomeOnboardingScreen: React.FC<WelcomeOnboardingScreenProps> = (
       <div className="w-full max-w-md pb-4 pt-2">
         <button
           onClick={onStart}
-          className="w-full bg-stone-900 hover:bg-black text-white font-bold py-4 px-6 rounded-2xl text-base border border-stone-800 border-b-5 border-b-stone-950 active:translate-y-[2px] active:border-b-2 shadow-sm transition-all duration-150 flex items-center justify-center gap-2.5 cursor-pointer"
+          className="w-full bg-gradient-to-r from-stone-900 via-stone-800 to-stone-950 hover:from-black hover:via-stone-900 hover:to-black text-white font-bold py-4 px-6 rounded-2xl text-base border border-stone-800 border-b-4 border-b-stone-950 active:translate-y-[2px] active:border-b-2 shadow-lg shadow-stone-900/10 transition-all duration-150 flex items-center justify-center gap-2.5 cursor-pointer active:scale-[0.99]"
         >
           <span>চলো শুরু করি</span>
           <ArrowRight className="w-5 h-5 text-amber-400" />

@@ -2,39 +2,75 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     
-    // User profile document
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function to check ownership of existing document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Helper function to check ownership of resource
+    function isDocOwner() {
+      return isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // Helper function for creating new documents
+    function isCreatingForSelf() {
+      return isAuthenticated() && request.resource.data.userId == request.auth.uid;
+    }
+
+    // User Profile
     match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read: if isOwner(userId);
+      allow write, create, update: if isOwner(userId);
     }
 
     // Exams collection
     match /exams/{examId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read, update, delete: if isDocOwner();
+      allow create: if isCreatingForSelf();
     }
 
-    // Study Items collection
+    // Study Items collection (syllabus chapters, topics, formulas)
     match /studyItems/{itemId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read, update, delete: if isDocOwner();
+      allow create: if isCreatingForSelf();
     }
 
-    // Materials collection
+    // Study Materials & Lecture Notes collection
     match /materials/{materialId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read, update, delete: if isDocOwner();
+      allow create: if isCreatingForSelf();
     }
 
-    // Mistakes collection
+    // Mistake Book collection
     match /mistakes/{mistakeId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read, update, delete: if isDocOwner();
+      allow create: if isCreatingForSelf();
     }
 
-    // Test History collection
+    // Test History & Exam Attempts
     match /testHistory/{historyId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read, update, delete: if isDocOwner();
+      allow create: if isCreatingForSelf();
+    }
+
+    match /attempts/{attemptId} {
+      allow read, update, delete: if isDocOwner();
+      allow create: if isCreatingForSelf();
+    }
+
+    match /generatedTests/{testId} {
+      allow read, update, delete: if isDocOwner();
+      allow create: if isCreatingForSelf();
+    }
+
+    // User Specific Subcollections fallback
+    match /users/{userId}/{document=**} {
+      allow read, write: if isOwner(userId);
     }
   }
 }

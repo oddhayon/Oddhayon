@@ -188,7 +188,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
                   className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-white hover:bg-stone-100 text-stone-900 font-bold border border-stone-200 border-b-3 border-b-stone-300 rounded-xl text-xs transition-all cursor-pointer shadow-2xs active:translate-y-[1px]"
                 >
                   <Edit3 className="w-3.5 h-3.5 text-amber-600" />
-                  <span>{language === "bn" ? "প্রফাইল এডিট করুন" : "Edit Profile"}</span>
+                  <span>{language === "bn" ? "প্রফাইল এডিট করো" : "Edit Profile"}</span>
                 </button>
               )}
             </div>
@@ -223,7 +223,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
           <div className="flex items-center justify-between pb-3 border-b border-stone-100">
             <h2 className="font-extrabold text-base text-stone-900 flex items-center gap-2">
               <User className="w-4 h-4 text-amber-500" />
-              <span>{language === "bn" ? "প্রফাইল তথ্য পরিবর্তন করুন" : "Update Profile Information"}</span>
+              <span>{language === "bn" ? "প্রফাইল তথ্য পরিবর্তন করো" : "Update Profile Information"}</span>
             </h2>
             <button
               type="button"
@@ -238,7 +238,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             {/* Name */}
             <div className="space-y-1.5">
               <label className="block text-stone-600 font-bold">
-                {language === "bn" ? "আপনার নাম" : "Full Name"}
+                {language === "bn" ? "তোমার নাম" : "Full Name"}
               </label>
               <input
                 type="text"
@@ -336,7 +336,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
               className="inline-flex items-center gap-1.5 px-5 py-2 bg-stone-900 hover:bg-black text-white font-bold border border-stone-800 border-b-3 border-b-stone-950 rounded-xl text-xs transition-all cursor-pointer active:translate-y-[1px]"
             >
               <Save className="w-3.5 h-3.5 text-amber-400" />
-              <span>{saving ? (language === "bn" ? "সংরক্ষণ হচ্ছে..." : "Saving...") : (language === "bn" ? "সংরক্ষণ করুন" : "Save Changes")}</span>
+              <span>{saving ? (language === "bn" ? "সংরক্ষণ হচ্ছে..." : "Saving...") : (language === "bn" ? "সংরক্ষণ করো" : "Save Changes")}</span>
             </button>
           </div>
         </form>
@@ -444,7 +444,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
               className="px-3 py-1.5 bg-stone-900 hover:bg-black text-white font-bold border border-stone-800 border-b-2 border-b-stone-950 rounded-xl text-xs transition-all cursor-pointer flex items-center gap-1 active:translate-y-[1px]"
             >
               <Plus className="w-3.5 h-3.5 text-amber-400" />
-              <span>{language === "bn" ? "যুক্ত করুন" : "Add"}</span>
+              <span>{language === "bn" ? "যুক্ত করো" : "Add"}</span>
             </button>
           </form>
         </div>
@@ -511,7 +511,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             </div>
             <div>
               <p className="font-bold text-xs text-stone-900">{language === "bn" ? "৩ দিনের স্ট্রিক" : "3-Day Streak"}</p>
-              <p className="text-[11px] text-stone-500">{streakCount >= 3 ? (language === "bn" ? "অর্জিত হয়েছে!" : "Unlocked!") : (language === "bn" ? "৩ দিন টানা পড়াশোনা করুন" : "Study 3 days in a row")}</p>
+              <p className="text-[11px] text-stone-500">{streakCount >= 3 ? (language === "bn" ? "অর্জিত হয়েছে!" : "Unlocked!") : (language === "bn" ? "৩ দিন টানা পড়াশোনা করো" : "Study 3 days in a row")}</p>
             </div>
           </div>
 
@@ -521,7 +521,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             </div>
             <div>
               <p className="font-bold text-xs text-stone-900">{language === "bn" ? "পড়া মাস্টার" : "Task Master"}</p>
-              <p className="text-[11px] text-stone-500">{completedTasks >= 5 ? (language === "bn" ? "৫টি পড়ার টপিক শেষ করেছেন!" : "Completed 5 study tasks!") : (language === "bn" ? "৫টি পড়া শেষ করুন" : "Complete 5 tasks")}</p>
+              <p className="text-[11px] text-stone-500">{completedTasks >= 5 ? (language === "bn" ? "৫টি পড়ার টপিক শেষ করেছেন!" : "Completed 5 study tasks!") : (language === "bn" ? "৫টি পড়া শেষ করো" : "Complete 5 tasks")}</p>
             </div>
           </div>
         </div>
@@ -547,14 +547,14 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             onClick={() => onLanguageChange(language === "bn" ? "en" : "bn")}
             className="w-full sm:w-auto px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold border border-stone-300 rounded-xl text-xs transition-all cursor-pointer active:translate-y-[1px]"
           >
-            {language === "bn" ? "Switch to English" : "বাংলা ভাষায় পরিবর্তন করুন"}
+            {language === "bn" ? "Switch to English" : "বাংলা ভাষায় পরিবর্তন করো"}
           </button>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-stone-100">
           <div>
             <p className="font-bold text-xs text-stone-900">{language === "bn" ? "সাইন আউট" : "Sign Out"}</p>
-            <p className="text-[11px] text-stone-500">{language === "bn" ? "অ্যাকাউন্ট থেকে লগআউট করতে নিচে ক্লিক করুন" : "Sign out of your account on this device"}</p>
+            <p className="text-[11px] text-stone-500">{language === "bn" ? "অ্যাকাউন্ট থেকে লগআউট করতে নিচে ক্লিক করো" : "Sign out of your account on this device"}</p>
           </div>
 
           <button
@@ -562,7 +562,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-red-50 hover:bg-red-100 text-red-700 font-bold border border-red-200 border-b-2 border-b-red-300 rounded-xl text-xs transition-all cursor-pointer active:translate-y-[1px]"
           >
             <LogOut className="w-4 h-4" />
-            <span>{language === "bn" ? "সাইন আউট করুন" : "Sign Out"}</span>
+            <span>{language === "bn" ? "সাইন আউট করো" : "Sign Out"}</span>
           </button>
         </div>
       </div>

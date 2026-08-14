@@ -39,7 +39,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({
         </h2>
         <p className="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mt-0.5">
           {language === "bn"
-            ? "আপনার পরীক্ষার সার্বিক প্রস্তুতি এবং সাবজেক্ট ভিত্তিক অ্যানালিটিক্স"
+            ? "তোমার পরীক্ষার সার্বিক প্রস্তুতি এবং সাবজেক্ট ভিত্তিক অ্যানালিটিক্স"
             : "Overview of overall exam readiness and subject-level performance metrics"}
         </p>
       </div>

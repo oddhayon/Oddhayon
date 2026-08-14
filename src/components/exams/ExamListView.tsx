@@ -33,7 +33,7 @@ export const ExamListView: React.FC<ExamListViewProps> = ({
           </h1>
           <p className="text-xs text-stone-500 mt-1">
             {language === "bn"
-              ? "পরীক্ষা সিলেবাস পরিচালনা করুন, সাবজেক্টের চ্যাপ্টার যুক্ত করুন এবং পড়ার অগ্রগতি ট্র্যাক করুন।"
+              ? "পরীক্ষা সিলেবাস পরিচালনা করো, সাবজেক্টের চ্যাপ্টার যুক্ত করো এবং পড়ার অগ্রগতি ট্র্যাক করো।"
               : "Manage targeted exam syllabi, chapter priorities, and progress timelines."}
           </p>
         </div>
@@ -43,7 +43,7 @@ export const ExamListView: React.FC<ExamListViewProps> = ({
           className="inline-flex items-center gap-2 px-4 py-2.5 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer active:scale-98"
         >
           <Plus className="w-4 h-4 text-amber-400" />
-          <span>{language === "bn" ? "নতুন পরীক্ষা যুক্ত করুন" : "Add Target Exam"}</span>
+          <span>{language === "bn" ? "নতুন পরীক্ষা যুক্ত করো" : "Add Target Exam"}</span>
         </button>
       </div>
 
@@ -58,7 +58,7 @@ export const ExamListView: React.FC<ExamListViewProps> = ({
             onClick={handleOpen}
             className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs cursor-pointer transition-all"
           >
-            {language === "bn" ? "নতুন পরীক্ষা যুক্ত করুন" : "Create Target Exam"}
+            {language === "bn" ? "নতুন পরীক্ষা যুক্ত করো" : "Create Target Exam"}
           </button>
         </div>
       ) : (
@@ -126,7 +126,7 @@ export const ExamListView: React.FC<ExamListViewProps> = ({
                     onClick={() => onSelectExam(ex)}
                     className="inline-flex items-center gap-1 px-3 py-1.5 bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors cursor-pointer"
                   >
-                    <span>{language === "bn" ? "সিলেবাস খুলুন" : "Open Workspace"}</span>
+                    <span>{language === "bn" ? "সিলেবাস খুলো" : "Open Workspace"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>

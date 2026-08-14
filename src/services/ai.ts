@@ -126,7 +126,7 @@ export const askAITutor = async (options: {
   } catch (err: any) {
     console.error("Client AI Tutor Fetch Error:", err);
     return options.language === "bn"
-      ? "দুঃখিত, এই মুহূর্তে উত্তর তৈরিতে ত্রুটি হয়েছে। অনুগ্রহ করে পুনরায় চেষ্টা করুন।"
+      ? "দুঃখিত, এই মুহূর্তে উত্তর তৈরিতে ত্রুটি হয়েছে। অনুগ্রহ করে পুনরায় চেষ্টা করো।"
       : "Sorry, an error occurred while connecting to AI Tutor. Please try again.";
   }
 };

@@ -109,10 +109,10 @@ export const CreateExamModal: React.FC<CreateExamModalProps> = ({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title={language === "bn" ? "নতুন পরীক্ষা যুক্ত করুন" : "Add Target Exam"}
+      title={language === "bn" ? "নতুন পরীক্ষা যুক্ত করো" : "Add Target Exam"}
       subtitle={
         language === "bn"
-          ? "আপনার আসন্ন পরীক্ষার বিষয় এবং তারিখ সেট করুন (একক বা একসাথে একাধিক)"
+          ? "তোমার আসন্ন পরীক্ষার বিষয় এবং তারিখ সেট করো (একক বা একসাথে একাধিক)"
           : "Define single or multiple upcoming target exams"
       }
     >
@@ -217,7 +217,7 @@ export const CreateExamModal: React.FC<CreateExamModalProps> = ({
                 type="submit"
                 className="px-5 py-2 bg-stone-900 hover:bg-black text-white font-bold border border-stone-800 border-b-3 border-b-stone-950 rounded-xl transition-all cursor-pointer active:translate-y-[1px]"
               >
-                {language === "bn" ? "সংরক্ষণ করুন" : "Create Exam"}
+                {language === "bn" ? "সংরক্ষণ করো" : "Create Exam"}
               </button>
             </div>
           </form>
@@ -291,7 +291,7 @@ export const CreateExamModal: React.FC<CreateExamModalProps> = ({
                 type="submit"
                 className="px-5 py-2 bg-stone-900 hover:bg-black text-white font-bold border border-stone-800 border-b-3 border-b-stone-950 rounded-xl transition-all cursor-pointer active:translate-y-[1px]"
               >
-                {language === "bn" ? "একসাথে যুক্ত করুন" : "Bulk Create"}
+                {language === "bn" ? "একসাথে যুক্ত করো" : "Bulk Create"}
               </button>
             </div>
           </form>

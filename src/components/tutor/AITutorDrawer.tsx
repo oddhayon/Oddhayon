@@ -33,7 +33,7 @@ export const AITutorDrawer: React.FC<AITutorDrawerProps> = ({
       sender: "ai",
       text:
         language === "bn"
-          ? "হ্যালো! আমি আপনার এআই স্টাডি টিউটর। যেকোনো কঠিন অংক, সূত্র বা প্রশ্ন নিয়ে আমায় জিজ্ঞেস করুন!"
+          ? "হ্যালো! আমি তোমার এআই স্টাডি টিউটর। যেকোনো কঠিন অংক, সূত্র বা প্রশ্ন নিয়ে আমায় জিজ্ঞেস করো!"
           : "Hello! I am your AI Study Tutor. Ask me any math formula, physics problem or study question!",
       timestamp: new Date().toISOString(),
     },
@@ -94,7 +94,7 @@ export const AITutorDrawer: React.FC<AITutorDrawerProps> = ({
           sender: "ai",
           text:
             language === "bn"
-              ? "দুঃখিত, উত্তর তৈরি করতে সমস্যা হয়েছে। আবার চেষ্টা করুন।"
+              ? "দুঃখিত, উত্তর তৈরি করতে সমস্যা হয়েছে। আবার চেষ্টা করো।"
               : "Sorry, failed to generate explanation. Please try again.",
           timestamp: new Date().toISOString(),
         },
@@ -215,7 +215,7 @@ export const AITutorDrawer: React.FC<AITutorDrawerProps> = ({
             onChange={(e) => setInput(e.target.value)}
             placeholder={
               language === "bn"
-                ? "আপনার প্রশ্ন লিখুন (যেমন: সূত্রের প্রুফ বুঝিয়ে বল)..."
+                ? "তোমার প্রশ্ন লিখুন (যেমন: সূত্রের প্রুফ বুঝিয়ে বল)..."
                 : "Ask tutor anything..."
             }
             className="flex-1 px-3.5 py-2 bg-stone-100 dark:bg-stone-800 border border-transparent focus:border-indigo-500 rounded-xl text-xs text-stone-900 dark:text-stone-100 focus:outline-none"

@@ -131,16 +131,16 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
             <p className="text-xs text-stone-400">
               {language === "bn"
-                ? "পরীক্ষার প্রস্তুতি ও অধ্যয়ন ট্র্যাক পরিচালনা করুন"
+                ? "পরীক্ষার প্রস্তুতি ও অধ্যয়ন ট্র্যাক পরিচালনা করো"
                 : "Manage your exam preparations and daily learning goals"}
             </p>
           </div>
 
-          {/* Quick Action Grid - Minimal Compact Buttons */}
+          {/* Quick Action Grid - Minimal Compact Buttons with Subtle Gradients */}
           <div className="flex flex-wrap items-center gap-2 shrink-0">
             <button
               onClick={onOpenAddStudyItem}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-stone-100 text-stone-900 font-bold border border-stone-200 border-b-2 border-b-stone-300 active:translate-y-[1px] rounded-xl text-xs transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-b from-white to-stone-100 hover:from-stone-50 hover:to-stone-200 text-stone-900 font-bold border border-stone-200 border-b-3 border-b-stone-300 active:translate-y-[1px] rounded-xl text-xs transition-all shadow-2xs active:scale-[0.98] cursor-pointer"
             >
               <Plus className="w-3.5 h-3.5 text-amber-600" />
               <span>{language === "bn" ? "নতুন পড়ার টপিক" : "Add Task"}</span>
@@ -148,7 +148,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
             <button
               onClick={onOpenUploadMaterial}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold border border-indigo-700 border-b-2 border-b-indigo-900 active:translate-y-[1px] rounded-xl text-xs transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-indigo-600 via-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white font-bold border border-indigo-700 border-b-3 border-b-indigo-900 active:translate-y-[1px] rounded-xl text-xs transition-all shadow-2xs active:scale-[0.98] cursor-pointer"
             >
               <Upload className="w-3.5 h-3.5" />
               <span>{language === "bn" ? "ছবি আপলোড" : "Upload OCR"}</span>
@@ -156,7 +156,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
             <button
               onClick={onOpenGenerateTest}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold border border-amber-600 border-b-2 border-b-amber-700 active:translate-y-[1px] rounded-xl text-xs transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-stone-950 font-bold border border-amber-500 border-b-3 border-b-amber-700 active:translate-y-[1px] rounded-xl text-xs transition-all shadow-2xs active:scale-[0.98] cursor-pointer"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>{language === "bn" ? "এআই টেস্ট" : "AI Quiz"}</span>
@@ -170,10 +170,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-base font-bold text-stone-900 tracking-tight">
-              {language === "bn" ? "আপনার নিবন্ধিত পরীক্ষাসমূহ" : "Your Active Exams"}
+              {language === "bn" ? "তোমার নিবন্ধিত পরীক্ষাসমূহ" : "Your Active Exams"}
             </h2>
             <p className="text-xs text-stone-500">
-              {language === "bn" ? "ওয়ার্কস্পেসে ঢুকতে পরীক্ষার কার্ডে ক্লিক করুন" : "Click exam card to open dedicated syllabus workspace"}
+              {language === "bn" ? "ওয়ার্কস্পেসে ঢুকতে পরীক্ষার কার্ডে ক্লিক করো" : "Click exam card to open dedicated syllabus workspace"}
             </p>
           </div>
 
@@ -182,7 +182,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             className="inline-flex items-center gap-1.5 px-3 py-2 bg-white hover:bg-stone-50 text-stone-800 font-bold border border-stone-200 border-b-3 border-b-stone-300 active:translate-y-[1px] active:border-b-2 rounded-xl text-xs transition-all shadow-2xs cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5 text-stone-600" />
-            <span>{language === "bn" ? "পরীক্ষা যোগ করুন" : "Add Exam"}</span>
+            <span>{language === "bn" ? "পরীক্ষা যোগ করো" : "Add Exam"}</span>
           </button>
         </div>
 
@@ -265,14 +265,14 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             onClick={() => onNavigateTab("study_items")}
             className="text-xs font-bold text-stone-900 hover:text-black flex items-center gap-1 py-1 px-3 bg-stone-100 hover:bg-stone-200 rounded-xl border border-stone-200 border-b-2 border-b-stone-300 transition-all cursor-pointer"
           >
-            <span>{language === "bn" ? "সবগুলো দেখুন" : "View All"}</span>
+            <span>{language === "bn" ? "সবগুলো দেখো" : "View All"}</span>
             <ArrowRight className="w-3.5 h-3.5 text-amber-500" />
           </button>
         </div>
 
         {todayTasks.length === 0 ? (
           <div className="text-xs text-stone-400 text-center py-6 font-medium">
-            {language === "bn" ? "কোনো পড়ার টপিক নেই। 'নতুন পড়ার টপিক' বাটনে ক্লিক করে যুক্ত করুন।" : "No study items scheduled."}
+            {language === "bn" ? "কোনো পড়ার টপিক নেই। 'নতুন পড়ার টপিক' বাটনে ক্লিক করে যুক্ত করো।" : "No study items scheduled."}
           </div>
         ) : (
           <div className="space-y-2.5">

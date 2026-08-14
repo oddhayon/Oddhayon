@@ -77,7 +77,7 @@ export const OCRReviewModal: React.FC<OCRReviewModalProps> = ({
       title={language === "bn" ? "AI এক্সট্র্যাক্টেড নোট রিভিউ" : "Review Extracted Content"}
       subtitle={
         language === "bn"
-          ? "Gemini AI দ্বারা চিহ্নিত তথ্যসমূহ রিভিউ করুন এবং মেটেরিয়াল হিসেবে সংরক্ষণ করুন"
+          ? "Gemini AI দ্বারা চিহ্নিত তথ্যসমূহ রিভিউ করো এবং মেটেরিয়াল হিসেবে সংরক্ষণ করো"
           : "Review extracted concepts, formulas, and auto-generated study items"
       }
       maxWidth="2xl"
@@ -148,7 +148,7 @@ export const OCRReviewModal: React.FC<OCRReviewModalProps> = ({
                 />
                 <span>
                   {language === "bn"
-                    ? "স্বয়ংক্রিয়ভাবে পড়ার তালিকায় যুক্ত করুন"
+                    ? "স্বয়ংক্রিয়ভাবে পড়ার তালিকায় যুক্ত করো"
                     : "Auto-create Study Items"}
                 </span>
               </label>
@@ -191,7 +191,7 @@ export const OCRReviewModal: React.FC<OCRReviewModalProps> = ({
             className="inline-flex items-center gap-1.5 px-5 py-2 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 rounded-xl text-xs font-bold shadow-xs"
           >
             <Check className="w-4 h-4" />
-            <span>{language === "bn" ? "সংরক্ষণ করুন" : "Save Material"}</span>
+            <span>{language === "bn" ? "সংরক্ষণ করো" : "Save Material"}</span>
           </button>
         </div>
       </div>

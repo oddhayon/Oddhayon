@@ -79,7 +79,7 @@ export const GenerateTestModal: React.FC<GenerateTestModalProps> = ({
       title={language === "bn" ? "এআই প্রশ্ন ও টেস্ট জেনারেটর" : "AI Test Generator"}
       subtitle={
         language === "bn"
-          ? "আপলোডকৃত নোট ও সিলেবাসের উপর ভিত্তি করে কাস্টম প্র্যাকটিস টেস্ট ও বোর্ডের আদলে প্রশ্নপত্র তৈরি করুন"
+          ? "আপলোডকৃত নোট ও সিলেবাসের উপর ভিত্তি করে কাস্টম প্র্যাকটিস টেস্ট ও বোর্ডের আদলে প্রশ্নপত্র তৈরি করো"
           : "Generate customized practice tests (MCQ, Creative, Short) grounded in your notes"
       }
       maxWidth="lg"
@@ -94,7 +94,7 @@ export const GenerateTestModal: React.FC<GenerateTestModalProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label className="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
-              {language === "bn" ? "পরীক্ষা নির্বাচন করুন *" : "Select Exam *"}
+              {language === "bn" ? "পরীক্ষা নির্বাচন করো *" : "Select Exam *"}
             </label>
             <select
               value={examId}
@@ -114,7 +114,7 @@ export const GenerateTestModal: React.FC<GenerateTestModalProps> = ({
 
           <div>
             <label className="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
-              {language === "bn" ? "উৎস লেকচার/নোট সিলেক্ট করুন" : "Source Material / Note"}
+              {language === "bn" ? "উৎস লেকচার/নোট সিলেক্ট করো" : "Source Material / Note"}
             </label>
             <select
               value={materialId}
@@ -168,7 +168,7 @@ export const GenerateTestModal: React.FC<GenerateTestModalProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <RangeSlider
             label={language === "bn" ? "প্রশ্নের সংখ্যা (Questions Count)" : "Question Count"}
-            subtitle={language === "bn" ? "টেস্টের দৈর্ঘ্য এডজাস্ট করুন" : "Set exact number of questions"}
+            subtitle={language === "bn" ? "টেস্টের দৈর্ঘ্য এডজাস্ট করো" : "Set exact number of questions"}
             value={questionCount}
             min={3}
             max={30}
@@ -182,7 +182,7 @@ export const GenerateTestModal: React.FC<GenerateTestModalProps> = ({
 
           <RangeSlider
             label={language === "bn" ? "সময়সীমা (Timer Limit)" : "Time Limit"}
-            subtitle={language === "bn" ? "কাউন্টডাউন টাইমার সেট করুন" : "Set test duration"}
+            subtitle={language === "bn" ? "কাউন্টডাউন টাইমার সেট করো" : "Set test duration"}
             value={timeLimitMinutes}
             min={5}
             max={120}
@@ -228,7 +228,7 @@ export const GenerateTestModal: React.FC<GenerateTestModalProps> = ({
           <BrainCircuit className="w-4 h-4 text-indigo-500 shrink-0" />
           <span>
             {language === "bn"
-              ? "Gemini AI আপনার পছন্দ অনুযায়ী প্রতিটি প্রশ্নের সঠিক উত্তর এবং ব্যাখ্যা জেনারেট করবে।"
+              ? "Gemini AI তোমার পছন্দ অনুযায়ী প্রতিটি প্রশ্নের সঠিক উত্তর এবং ব্যাখ্যা জেনারেট করবে।"
               : "Gemini AI will synthesize custom questions with step-by-step solutions and explanations."}
           </span>
         </div>
@@ -255,7 +255,7 @@ export const GenerateTestModal: React.FC<GenerateTestModalProps> = ({
             ) : (
               <>
                 <Sparkles className="w-4 h-4 text-indigo-400" />
-                <span>{language === "bn" ? "পরীক্ষা জেনারেট করুন" : "Generate Test"}</span>
+                <span>{language === "bn" ? "পরীক্ষা জেনারেট করো" : "Generate Test"}</span>
               </>
             )}
           </button>

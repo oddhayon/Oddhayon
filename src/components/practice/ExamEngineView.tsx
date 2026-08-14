@@ -233,7 +233,7 @@ export const ExamEngineView: React.FC<ExamEngineViewProps> = ({
                         ? "ফ্ল্যাগ করা হয়েছে"
                         : "Flagged"
                       : language === "bn"
-                      ? "রিভিউ এর জন্য চিহ্নিত করুন"
+                      ? "রিভিউ এর জন্য চিহ্নিত করো"
                       : "Flag"}
                   </span>
                 </button>
@@ -322,7 +322,7 @@ export const ExamEngineView: React.FC<ExamEngineViewProps> = ({
                   <div>
                     <label className="block text-xs font-bold text-stone-400 mb-1">
                       {language === "bn"
-                        ? "আপনার লিখিত উত্তর / ধাপসমূহ টাইপ করুন:"
+                        ? "তোমার লিখিত উত্তর / ধাপসমূহ টাইপ করো:"
                         : "Type your answer step-by-step:"}
                     </label>
                     <textarea
@@ -333,7 +333,7 @@ export const ExamEngineView: React.FC<ExamEngineViewProps> = ({
                       }
                       placeholder={
                         language === "bn"
-                          ? "আপনার গাণিতিক সমাধান বা ব্যাখ্যা এখানে লিখুন..."
+                          ? "তোমার গাণিতিক সমাধান বা ব্যাখ্যা এখানে লিখুন..."
                           : "Write your mathematical derivation or explanation..."
                       }
                       className="w-full p-3 bg-stone-900 border border-stone-800 rounded-xl text-xs text-stone-100 font-mono focus:outline-none focus:border-indigo-500"
@@ -433,7 +433,7 @@ export const ExamEngineView: React.FC<ExamEngineViewProps> = ({
               }}
               className="w-full py-2 bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-stone-200 rounded-xl text-xs font-semibold transition-colors"
             >
-              {language === "bn" ? "পরীক্ষা বাতিল করুন" : "Cancel Session"}
+              {language === "bn" ? "পরীক্ষা বাতিল করো" : "Cancel Session"}
             </button>
           </div>
         </aside>
@@ -453,7 +453,7 @@ export const ExamEngineView: React.FC<ExamEngineViewProps> = ({
                 </h3>
                 <p className="text-xs text-stone-400 mt-0.5">
                   {language === "bn"
-                    ? "আপনি কি উত্তরপত্র ফাইনাল সাবমিট করতে চান?"
+                    ? "তুমি কি উত্তরপত্র ফাইনাল সাবমিট করতে চান?"
                     : "Are you sure you want to finalize your exam test?"}
                 </p>
               </div>
@@ -481,7 +481,7 @@ export const ExamEngineView: React.FC<ExamEngineViewProps> = ({
                 onClick={handleFinalSubmit}
                 className="px-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold shadow-md"
               >
-                {language === "bn" ? "হ্যাঁ, সাবমিট করুন" : "Yes, Submit"}
+                {language === "bn" ? "হ্যাঁ, সাবমিট করো" : "Yes, Submit"}
               </button>
             </div>
           </div>

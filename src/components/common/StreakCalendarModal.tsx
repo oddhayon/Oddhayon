@@ -156,7 +156,7 @@ export const StreakCalendarModal: React.FC<StreakCalendarModalProps> = ({
                 {language === "bn" ? "স্ট্রিক ধরে রাখুন" : "Keep the Streak Alive!"}
               </p>
               <p className="text-[11px] text-stone-600">
-                {language === "bn" ? "প্রতিদিন অন্তত ১টি টপিক শেষ করুন" : "Complete at least 1 task daily"}
+                {language === "bn" ? "প্রতিদিন অন্তত ১টি টপিক শেষ করো" : "Complete at least 1 task daily"}
               </p>
             </div>
           </div>

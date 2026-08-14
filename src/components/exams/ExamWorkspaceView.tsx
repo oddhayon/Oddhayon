@@ -118,7 +118,7 @@ export const ExamWorkspaceView: React.FC<ExamWorkspaceViewProps> = ({
               {language === "bn" ? "চ্যাপ্টার অনুযায়ী কভারেজ ট্র্যাকার" : "Chapter-wise Syllabus Tracker"}
             </h2>
             <p className="text-xs text-stone-500">
-              {language === "bn" ? "প্রতিটি অধ্যায়ের স্ট্যাটাস আপডেট করুন (Not Started -> In Progress -> Mastered)" : "Track status from Not Started to Revision Mastered"}
+              {language === "bn" ? "প্রতিটি অধ্যায়ের স্ট্যাটাস আপডেট করো (Not Started -> In Progress -> Mastered)" : "Track status from Not Started to Revision Mastered"}
             </p>
           </div>
 

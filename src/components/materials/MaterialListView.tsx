@@ -55,7 +55,7 @@ export const MaterialListView: React.FC<MaterialListViewProps> = ({
           className="inline-flex items-center gap-2 px-4 py-2 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 font-semibold rounded-xl text-xs shadow-xs transition-all"
         >
           <Upload className="w-4 h-4" />
-          <span>{language === "bn" ? "নোট আপলোড করুন" : "Upload Note"}</span>
+          <span>{language === "bn" ? "নোট আপলোড করো" : "Upload Note"}</span>
         </button>
       </div>
 
@@ -67,7 +67,7 @@ export const MaterialListView: React.FC<MaterialListViewProps> = ({
             type="text"
             placeholder={
               language === "bn"
-                ? "লেকচার শিরোনাম বা টেক্সট দিয়ে সার্চ করুন..."
+                ? "লেকচার শিরোনাম বা টেক্সট দিয়ে সার্চ করো..."
                 : "Search materials by title or content..."
             }
             value={searchQuery}
@@ -97,7 +97,7 @@ export const MaterialListView: React.FC<MaterialListViewProps> = ({
         <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-12 text-center text-xs text-stone-400">
           <FileText className="w-10 h-10 mx-auto text-stone-300 dark:text-stone-700 mb-2" />
           {language === "bn"
-            ? "কোনো লেকচার ফাইল বা নোট পাওয়া যায়নি। ছবি বা টেক্সট আপলোড করুন!"
+            ? "কোনো লেকচার ফাইল বা নোট পাওয়া যায়নি। ছবি বা টেক্সট আপলোড করো!"
             : "No materials found. Upload textbook photos or class notes!"}
         </div>
       ) : (

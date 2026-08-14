@@ -41,7 +41,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
         </h2>
         <p className="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mt-0.5">
           {language === "bn"
-            ? "আপনার প্রোফাইল তথ্য, সিস্টেম ভাষা এবং লোকাল ডাটা পরিচালনা করুন"
+            ? "তোমার প্রোফাইল তথ্য, সিস্টেম ভাষা এবং লোকাল ডাটা পরিচালনা করো"
             : "Manage your student profile, default language, and local data"}
         </p>
       </div>
@@ -92,7 +92,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
               type="submit"
               className="px-5 py-2 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 rounded-xl text-xs font-bold shadow-xs transition-all"
             >
-              {language === "bn" ? "প্রোফাইল সেভ করুন" : "Save Profile"}
+              {language === "bn" ? "প্রোফাইল সেভ করো" : "Save Profile"}
             </button>
           </div>
         </form>
@@ -146,7 +146,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
         <div className="flex items-center justify-between p-3 bg-rose-50 dark:bg-rose-950/40 rounded-xl border border-rose-200/80 dark:border-rose-900/60">
           <div>
             <h4 className="text-xs font-bold text-rose-900 dark:text-rose-200">
-              {language === "bn" ? "পরীক্ষা ও ডেমো ডাটা রিসেট করুন" : "Reset Application Sample Data"}
+              {language === "bn" ? "পরীক্ষা ও ডেমো ডাটা রিসেট করো" : "Reset Application Sample Data"}
             </h4>
             <p className="text-[10px] text-rose-700 dark:text-rose-300 mt-0.5">
               {language === "bn"
@@ -164,7 +164,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white rounded-xl text-xs font-bold transition-all shadow-xs shrink-0"
           >
             <RefreshCw className="w-3.5 h-3.5" />
-            <span>{language === "bn" ? "রিসেট করুন" : "Reset Data"}</span>
+            <span>{language === "bn" ? "রিসেট করো" : "Reset Data"}</span>
           </button>
         </div>
       </div>

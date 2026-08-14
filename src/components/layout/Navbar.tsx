@@ -72,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             onClick={onOpenStreakCalendar}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 border-b-3 border-b-amber-400 active:translate-y-[1px] rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer"
-            title={language === "bn" ? "স্ট্রিক ক্যালেন্ডার দেখুন" : "View Streak Calendar"}
+            title={language === "bn" ? "স্ট্রিক ক্যালেন্ডার দেখো" : "View Streak Calendar"}
           >
             <Flame className="w-4 h-4 text-amber-600 fill-amber-500 animate-pulse" />
             <span className="font-extrabold">{streakCount} {language === "bn" ? "দিন" : "Days"}</span>
@@ -103,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* AI Tutor Launcher Button */}
           <button
             onClick={onOpenTutor}
-            className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-stone-900 hover:bg-black text-white border border-stone-800 border-b-3 border-b-stone-950 active:translate-y-[1px] rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer"
+            className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-gradient-to-r from-stone-900 via-stone-800 to-stone-950 hover:from-black hover:via-stone-900 hover:to-black text-white border border-stone-800 border-b-3 border-b-stone-950 active:translate-y-[1px] rounded-xl text-xs font-bold transition-all shadow-2xs cursor-pointer active:scale-[0.98]"
           >
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             <span>{language === "bn" ? "এআই টিউটর" : "AI Tutor"}</span>
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={onOpenProfile}
               className="w-9 h-9 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 border-b-3 border-b-stone-300 text-stone-800 flex items-center justify-center font-bold text-xs shadow-2xs cursor-pointer active:translate-y-[1px] transition-all overflow-hidden"
-              title={language === "bn" ? "প্রফাইল দেখুন" : "View Profile"}
+              title={language === "bn" ? "প্রফাইল দেখো" : "View Profile"}
             >
               {user.photoUrl ? (
                 <img src={user.photoUrl} alt={user.name} className="w-full h-full object-cover" />
@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <button
               onClick={handleLogout}
-              title={language === "bn" ? "সাইন আউট করুন" : "Sign Out"}
+              title={language === "bn" ? "সাইন আউট করো" : "Sign Out"}
               className="p-2 bg-white hover:bg-red-50 text-stone-400 hover:text-red-600 border border-stone-200 border-b-2 border-b-stone-300 rounded-xl transition-all shadow-2xs cursor-pointer active:translate-y-[1px]"
             >
               <LogOut className="w-4 h-4" />

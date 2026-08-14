@@ -81,7 +81,7 @@ export const SubjectSelect: React.FC<SubjectSelectProps> = ({
               }}
               placeholder={
                 language === "bn"
-                  ? "নতুন বিষয়ের নাম টাইপ করুন..."
+                  ? "নতুন বিষয়ের নাম টাইপ করো..."
                   : "Type subject name..."
               }
               className="flex-1 px-3 py-1.5 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-700 rounded-lg text-xs font-semibold text-stone-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500"
@@ -123,7 +123,7 @@ export const SubjectSelect: React.FC<SubjectSelectProps> = ({
             </option>
           ))}
           <option value="__ADD_NEW_SUBJECT__" className="font-bold text-indigo-600 dark:text-indigo-400">
-            {language === "bn" ? "➕ নতুন বিষয় যুক্ত করুন..." : "➕ Add Custom Subject..."}
+            {language === "bn" ? "➕ নতুন বিষয় যুক্ত করো..." : "➕ Add Custom Subject..."}
           </option>
         </select>
       )}

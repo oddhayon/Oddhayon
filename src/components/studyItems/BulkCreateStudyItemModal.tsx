@@ -68,7 +68,7 @@ export const BulkCreateStudyItemModal: React.FC<BulkCreateStudyItemModalProps> =
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title={language === "bn" ? "একসাথে একাধিক টপিক যুক্ত করুন" : "Bulk Import Topics"}
+      title={language === "bn" ? "একসাথে একাধিক টপিক যুক্ত করো" : "Bulk Import Topics"}
       subtitle={
         language === "bn"
           ? "প্রতিটি লাইনে একটি করে টপিকের নাম লিখুন। পুরো সিলেবাস একসাথে ইমপোর্ট হয়ে যাবে।"
@@ -169,7 +169,7 @@ export const BulkCreateStudyItemModal: React.FC<BulkCreateStudyItemModalProps> =
             type="submit"
             className="px-5 py-2 bg-stone-900 hover:bg-black text-white font-bold border border-stone-800 border-b-3 border-b-stone-950 rounded-xl transition-all cursor-pointer active:translate-y-[1px]"
           >
-            {language === "bn" ? "একসাথে ইমপোর্ট করুন" : "Bulk Import"}
+            {language === "bn" ? "একসাথে ইমপোর্ট করো" : "Bulk Import"}
           </button>
         </div>
       </form>

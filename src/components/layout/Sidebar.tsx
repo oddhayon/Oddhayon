@@ -102,7 +102,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         className="w-full py-2.5 px-4 bg-stone-900 hover:bg-black text-white font-bold border border-stone-800 border-b-4 border-b-stone-950 active:translate-y-[2px] active:border-b-2 rounded-xl text-xs flex items-center justify-center gap-2 shadow-2xs transition-all cursor-pointer"
       >
         <Plus className="w-4 h-4 text-amber-400" />
-        <span>{language === "bn" ? "পড়ার বিষয় যুক্ত করুন" : "Add Study Item"}</span>
+        <span>{language === "bn" ? "পড়ার বিষয় যুক্ত করো" : "Add Study Item"}</span>
       </button>
 
       {/* Nav Menu */}

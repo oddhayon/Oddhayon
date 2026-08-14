@@ -1,12 +1,12 @@
 {
-  "projectId": "gen-lang-client-0414137590",
-  "appId": "1:585733254977:web:92cc15bba04bb6283bbbc0",
-  "apiKey": "AIzaSyDOc7VW6kln1I3cX3IZn0eOhHdHcuzZW3w",
-  "authDomain": "gen-lang-client-0414137590.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-studyflowai-e8d29967-5107-4c74-8cfc-ff72c938ab0c",
-  "storageBucket": "gen-lang-client-0414137590.firebasestorage.app",
-  "messagingSenderId": "585733254977",
+  "projectId": "oddhoyonapp",
+  "appId": "1:41636093010:android:c4d7f65e246cce72da938b",
+  "apiKey": "AIzaSyAlSMOcyY38pQGiu0dxqTJbfo38PWf9ZW8",
+  "authDomain": "oddhoyonapp.firebaseapp.com",
+  "firestoreDatabaseId": "",
+  "storageBucket": "oddhoyonapp.firebasestorage.app",
+  "messagingSenderId": "41636093010",
   "measurementId": "",
-  "oAuthClientId": "585733254977-feovb2aud4sp6a8i9t9phkdteslahfdt.apps.googleusercontent.com",
+  "oAuthClientId": "41636093010-pk74hivit37i0akcs93oo3pmcb479459.apps.googleusercontent.com",
   "recaptchaSiteKey": ""
 }

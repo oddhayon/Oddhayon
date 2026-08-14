@@ -50,14 +50,26 @@ import { OCRReviewModal } from "./components/materials/OCRReviewModal";
 import { GenerateTestModal } from "./components/practice/GenerateTestModal";
 import { AITutorDrawer } from "./components/tutor/AITutorDrawer";
 import { StreakCalendarModal } from "./components/common/StreakCalendarModal";
+import { LoadingScreen } from "./components/common/LoadingScreen";
 
 const LOCAL_STORAGE_KEY = "oddhoyon_app_state_v1";
 
 export function App() {
   // Auth state
   const [authUser, setAuthUser] = useState<any>(null);
+  const [isGuest, setIsGuest] = useState<boolean>(() => {
+    return localStorage.getItem("oddhoyon_is_guest") === "true";
+  });
   const [authLoading, setAuthLoading] = useState(true);
+  const [splashTimeout, setSplashTimeout] = useState(true);
   const [showWelcomeOnboarding, setShowWelcomeOnboarding] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSplashTimeout(false);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Navigation & Language
   const [activeTab, setActiveTab] = useState<ActiveTab>("dashboard");
@@ -108,6 +120,8 @@ export function App() {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
         setAuthUser(firebaseUser);
+        setIsGuest(false);
+        localStorage.removeItem("oddhoyon_is_guest");
         const profile = await getUserProfile(firebaseUser.uid);
         const savedPhoto = localStorage.getItem("oddhoyon_profile_photo") || profile?.photoUrl || "";
         setUser({
@@ -128,11 +142,39 @@ export function App() {
         }
       } else {
         setAuthUser(null);
-        setUser(initialUser);
-        setExams([]);
-        setStudyItems([]);
-        setMaterials([]);
-        setMistakes([]);
+        const isCurrentlyGuest = localStorage.getItem("oddhoyon_is_guest") === "true";
+        if (isCurrentlyGuest) {
+          setIsGuest(true);
+          setUser(initialUser);
+          
+          const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+          let loadedExams = initialExams;
+          let loadedStudyItems = initialStudyItems;
+          let loadedMaterials = initialMaterials;
+          let loadedMistakes = initialMistakes;
+
+          if (saved) {
+            try {
+              const parsed = JSON.parse(saved);
+              if (parsed.exams) loadedExams = parsed.exams;
+              if (parsed.studyItems) loadedStudyItems = parsed.studyItems;
+              if (parsed.materials) loadedMaterials = parsed.materials;
+              if (parsed.mistakes) loadedMistakes = parsed.mistakes;
+            } catch(e) {}
+          }
+
+          setExams(loadedExams);
+          setStudyItems(loadedStudyItems);
+          setMaterials(loadedMaterials);
+          setMistakes(loadedMistakes);
+        } else {
+          setIsGuest(false);
+          setUser(initialUser);
+          setExams([]);
+          setStudyItems([]);
+          setMaterials([]);
+          setMistakes([]);
+        }
       }
       setAuthLoading(false);
     });
@@ -179,7 +221,7 @@ export function App() {
     }
   }, []);
 
-  // Save generated tests & attempts to Local Storage
+  // Save generated tests & attempts & guest data to Local Storage
   useEffect(() => {
     localStorage.setItem(
       LOCAL_STORAGE_KEY,
@@ -187,9 +229,10 @@ export function App() {
         generatedTests,
         attempts,
         language,
+        ...(isGuest ? { exams, studyItems, materials, mistakes } : {}),
       })
     );
-  }, [generatedTests, attempts, language]);
+  }, [generatedTests, attempts, language, isGuest, exams, studyItems, materials, mistakes]);
 
   // Recalculate Exam Preparation Scores when Study Items change
   useEffect(() => {
@@ -405,22 +448,37 @@ export function App() {
     );
   };
 
-  // Show Loading Screen while Checking Auth State
-  if (authLoading) {
-    return (
-      <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6 text-stone-600">
-        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-stone-900 mb-4"></div>
-        <p className="text-xs font-semibold font-['Hind_Siliguri']">অধ্যয়ন লোড হচ্ছে...</p>
-      </div>
-    );
+  // Show Loading Screen while Checking Auth State or Splash Timeout
+  if (authLoading || splashTimeout) {
+    return <LoadingScreen />;
   }
 
-  // If Not Authenticated, Render Minimalist Sign Up / Sign In Page
-  if (!authUser) {
-    return <AuthPage onSuccess={() => {
-      setShowWelcomeOnboarding(true);
-      setActiveTab("dashboard");
-    }} />;
+  // If Not Authenticated and Not Guest, Render Minimalist Sign Up / Sign In Page
+  if (!authUser && !isGuest) {
+    return (
+      <AuthPage
+        onSuccess={() => {
+          setIsGuest(false);
+          localStorage.removeItem("oddhoyon_is_guest");
+          setShowWelcomeOnboarding(true);
+          setActiveTab("dashboard");
+        }}
+        onContinueAsGuest={() => {
+          setIsGuest(true);
+          localStorage.setItem("oddhoyon_is_guest", "true");
+          setUser({
+            ...initialUser,
+            name: "গেস্ট শিক্ষার্থী",
+            email: "guest@oddhoyon.app",
+          });
+          setExams(initialExams);
+          setStudyItems(initialStudyItems);
+          setMaterials(initialMaterials);
+          setMistakes(initialMistakes);
+          setActiveTab("dashboard");
+        }}
+      />
+    );
   }
 
   // Show Post-Login Welcome Onboarding Screen with Mascot & "চলো শুরু করি" button (only for first time)
@@ -481,7 +539,12 @@ export function App() {
           }
           setGlobalSearchQuery("");
         }}
-        onSignOut={() => setAuthUser(null)}
+        onSignOut={() => {
+          auth.signOut();
+          setAuthUser(null);
+          setIsGuest(false);
+          localStorage.removeItem("oddhoyon_is_guest");
+        }}
       />
 
       <div className="flex-1 flex max-w-7xl w-full mx-auto px-0 sm:px-4 lg:px-8">
@@ -635,7 +698,12 @@ export function App() {
                   studyItems={studyItems}
                   language={language}
                   onLanguageChange={setLanguage}
-                  onSignOut={() => setAuthUser(null)}
+                  onSignOut={() => {
+                    auth.signOut();
+                    setAuthUser(null);
+                    setIsGuest(false);
+                    localStorage.removeItem("oddhoyon_is_guest");
+                  }}
                 />
               )}
 

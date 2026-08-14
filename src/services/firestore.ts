@@ -120,6 +120,7 @@ export const subscribeToUserMistakes = (
 
 // CRUD Operations for Exams
 export const saveExamToFirestore = async (exam: Exam): Promise<void> => {
+  if (exam.userId === "guest" || !exam.userId) return;
   try {
     const ref = doc(db, "exams", exam.id);
     await setDoc(ref, exam, { merge: true });
@@ -138,6 +139,7 @@ export const deleteExamFromFirestore = async (examId: string): Promise<void> => 
 
 // CRUD Operations for Study Items
 export const saveStudyItemToFirestore = async (item: StudyItem): Promise<void> => {
+  if (item.userId === "guest" || !item.userId) return;
   try {
     const ref = doc(db, "studyItems", item.id);
     await setDoc(ref, item, { merge: true });
@@ -156,6 +158,7 @@ export const deleteStudyItemFromFirestore = async (itemId: string): Promise<void
 
 // CRUD Operations for Materials
 export const saveMaterialToFirestore = async (material: Material): Promise<void> => {
+  if (material.userId === "guest" || !material.userId) return;
   try {
     const ref = doc(db, "materials", material.id);
     await setDoc(ref, material, { merge: true });
@@ -174,6 +177,7 @@ export const deleteMaterialFromFirestore = async (materialId: string): Promise<v
 
 // CRUD Operations for Mistakes
 export const saveMistakeToFirestore = async (mistake: MistakeItem): Promise<void> => {
+  if (mistake.userId === "guest" || !mistake.userId) return;
   try {
     const ref = doc(db, "mistakes", mistake.id);
     await setDoc(ref, mistake, { merge: true });

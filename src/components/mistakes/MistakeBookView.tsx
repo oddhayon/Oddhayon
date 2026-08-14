@@ -44,7 +44,7 @@ export const MistakeBookView: React.FC<MistakeBookViewProps> = ({
           </h2>
           <p className="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mt-0.5">
             {language === "bn"
-              ? "পরীক্ষায় যে বিষয়গুলোতে ভুল হয়েছে সেগুলো বারে বারে রিভিশন দিয়ে মাস্টার করুন"
+              ? "পরীক্ষায় যে বিষয়গুলোতে ভুল হয়েছে সেগুলো বারে বারে রিভিশন দিয়ে মাস্টার করো"
               : "Spaced repetition bank for targeting past test errors and weaknesses"}
           </p>
         </div>
@@ -146,7 +146,7 @@ export const MistakeBookView: React.FC<MistakeBookViewProps> = ({
                           ? "মাস্টার করা সম্পন্ন"
                           : "Mastered"
                         : language === "bn"
-                        ? "মাস্টার হিসেবে মার্ক করুন"
+                        ? "মাস্টার হিসেবে মার্ক করো"
                         : "Mark Mastered"}
                     </span>
                   </button>
@@ -168,7 +168,7 @@ export const MistakeBookView: React.FC<MistakeBookViewProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div className="p-3 bg-rose-50 dark:bg-rose-950/40 rounded-xl border border-rose-200/80 dark:border-rose-900/60 text-rose-900 dark:text-rose-200">
                   <span className="font-bold block text-[10px] uppercase text-rose-600 dark:text-rose-400 mb-1">
-                    {language === "bn" ? "আপনার দেওয়া ভুল উত্তর:" : "Your Error Answer:"}
+                    {language === "bn" ? "তোমার দেওয়া ভুল উত্তর:" : "Your Error Answer:"}
                   </span>
                   <span>{item.userAnswer}</span>
                 </div>
@@ -197,7 +197,7 @@ export const MistakeBookView: React.FC<MistakeBookViewProps> = ({
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 rounded-xl text-xs font-semibold border border-indigo-200/60 dark:border-indigo-800/60 transition-colors"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                  <span>{language === "bn" ? "এআই টিউটর ব্যাখ্যা করুন" : "Ask AI Tutor to Explain"}</span>
+                  <span>{language === "bn" ? "এআই টিউটর ব্যাখ্যা করো" : "Ask AI Tutor to Explain"}</span>
                 </button>
               </div>
             </div>

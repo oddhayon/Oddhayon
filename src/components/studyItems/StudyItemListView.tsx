@@ -57,7 +57,7 @@ export const StudyItemListView: React.FC<StudyItemListViewProps> = ({
           </h1>
           <p className="text-xs text-stone-500 mt-1">
             {language === "bn"
-              ? "লেকচার টপিক, সূত্র রিভিশন ও প্র্যাকটিস কাজের তালিকা যুক্ত ও সম্পন্ন চিহ্নিত করুন।"
+              ? "লেকচার টপিক, সূত্র রিভিশন ও প্র্যাকটিস কাজের তালিকা যুক্ত ও সম্পন্ন চিহ্নিত করো।"
               : "Organize theory topics, math formulas, and revision queues with priority tags."}
           </p>
         </div>
@@ -68,7 +68,7 @@ export const StudyItemListView: React.FC<StudyItemListViewProps> = ({
             className="inline-flex items-center gap-1.5 px-3.5 py-2.5 bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-300 rounded-xl text-xs font-bold transition-all cursor-pointer active:scale-98"
           >
             <ListPlus className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            <span>{language === "bn" ? "একসাথে একাধিক যুক্ত করুন" : "Bulk Import"}</span>
+            <span>{language === "bn" ? "একসাথে একাধিক যুক্ত করো" : "Bulk Import"}</span>
           </button>
 
           <button
@@ -76,7 +76,7 @@ export const StudyItemListView: React.FC<StudyItemListViewProps> = ({
             className="inline-flex items-center gap-1.5 px-3.5 py-2.5 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer active:scale-98"
           >
             <Plus className="w-4 h-4 text-amber-400" />
-            <span>{language === "bn" ? "টপিক যোগ করুন" : "Add Topic"}</span>
+            <span>{language === "bn" ? "টপিক যোগ করো" : "Add Topic"}</span>
           </button>
         </div>
       </div>
@@ -86,7 +86,7 @@ export const StudyItemListView: React.FC<StudyItemListViewProps> = ({
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2 text-stone-500 font-bold">
             <Filter className="w-4 h-4" />
-            <span>{language === "bn" ? "বিষয় অনুযায়ী ফিল্টার করুন:" : "Filter by Subject:"}</span>
+            <span>{language === "bn" ? "বিষয় অনুযায়ী ফিল্টার করো:" : "Filter by Subject:"}</span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -150,13 +150,13 @@ export const StudyItemListView: React.FC<StudyItemListViewProps> = ({
               onClick={handleOpenSingle}
               className="px-4 py-2 bg-stone-900 text-white font-bold rounded-xl text-xs cursor-pointer"
             >
-              {language === "bn" ? "নতুন টপিক যোগ করুন" : "Add Topic"}
+              {language === "bn" ? "নতুন টপিক যোগ করো" : "Add Topic"}
             </button>
             <button
               onClick={handleOpenBulk}
               className="px-4 py-2 bg-stone-100 text-stone-800 font-bold rounded-xl text-xs cursor-pointer"
             >
-              {language === "bn" ? "একসাথে একাধিক যুক্ত করুন" : "Bulk Import"}
+              {language === "bn" ? "একসাথে একাধিক যুক্ত করো" : "Bulk Import"}
             </button>
           </div>
         </div>

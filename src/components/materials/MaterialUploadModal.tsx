@@ -72,7 +72,7 @@ export const MaterialUploadModal: React.FC<MaterialUploadModalProps> = ({
       if (!imageBase64 && !textInput.trim()) {
         throw new Error(
           language === "bn"
-            ? "অনুগ্রহ করে একটি ছবি ফাইল সিলেক্ট করুন অথবা টেক্সট ইনপুট দিন।"
+            ? "অনুগ্রহ করে একটি ছবি ফাইল সিলেক্ট করো অথবা টেক্সট ইনপুট দিন।"
             : "Please select an image file or provide text notes."
         );
       }
@@ -111,7 +111,7 @@ export const MaterialUploadModal: React.FC<MaterialUploadModalProps> = ({
       title={language === "bn" ? "লেকচার ফাইল / নোট আপলোড (OCR & AI)" : "Upload Material / Notes"}
       subtitle={
         language === "bn"
-          ? "ছবি বা টেক্সট নোট আপলোড করুন — Gemini AI স্বয়ংক্রিয়ভাবে ফর্মুলা ও টপিক এক্সট্র্যাক্ট করবে"
+          ? "ছবি বা টেক্সট নোট আপলোড করো — Gemini AI স্বয়ংক্রিয়ভাবে ফর্মুলা ও টপিক এক্সট্র্যাক্ট করবে"
           : "Upload images of book pages, class notes or paste text to extract formulas and key concepts"
       }
     >
@@ -124,7 +124,7 @@ export const MaterialUploadModal: React.FC<MaterialUploadModalProps> = ({
 
         <div>
           <label className="block text-xs font-bold text-stone-700 dark:text-stone-300 mb-1">
-            {language === "bn" ? "পরীক্ষা নির্বাচন করুন *" : "Select Exam *"}
+            {language === "bn" ? "পরীক্ষা নির্বাচন করো *" : "Select Exam *"}
           </label>
           <select
             value={examId}
@@ -213,7 +213,7 @@ export const MaterialUploadModal: React.FC<MaterialUploadModalProps> = ({
                   </div>
                   <p className="text-xs font-bold text-stone-800 dark:text-stone-200">
                     {language === "bn"
-                      ? "বইয়ের পাতা, নোটিবুক বা প্রশ্নপত্রের ছবি সিলেক্ট করুন"
+                      ? "বইয়ের পাতা, নোটিবুক বা প্রশ্নপত্রের ছবি সিলেক্ট করো"
                       : "Click to browse or drag and drop image photo"}
                   </p>
                   <p className="text-[10px] text-stone-400">PNG, JPG, WEBP up to 20MB</p>
@@ -227,7 +227,7 @@ export const MaterialUploadModal: React.FC<MaterialUploadModalProps> = ({
               rows={6}
               placeholder={
                 language === "bn"
-                  ? "আপনার লেকচার বা অধ্যায়ের টেক্সট নোট এখানে পেস্ট করুন..."
+                  ? "তোমার লেকচার বা অধ্যায়ের টেক্সট নোট এখানে পেস্ট করো..."
                   : "Paste lecture text, notes or book chapter paragraphs here..."
               }
               value={textInput}
@@ -259,7 +259,7 @@ export const MaterialUploadModal: React.FC<MaterialUploadModalProps> = ({
             ) : (
               <>
                 <Sparkles className="w-4 h-4 text-indigo-400" />
-                <span>{language === "bn" ? "AI দিয়ে এনালাইজ করুন" : "Analyze with AI"}</span>
+                <span>{language === "bn" ? "AI দিয়ে এনালাইজ করো" : "Analyze with AI"}</span>
               </>
             )}
           </button>
